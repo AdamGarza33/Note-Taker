@@ -29,6 +29,15 @@ module.exports = (app) => {
 
        // DELETE 
        // Deletes note w/ specified id
- 
+  app.delete('/api/notes/:id', (req, res) => {
+    // reading notes form db.json
+    const db = JSON.parse(fs.readFileSync('db/db.json'))
+    // removing note with id
+    const deleteNote = db.filter(item => item.id !== req.params.id);
+    // Rewriting note to db.json
+    fs.writeFileSync('db/db.json', JSON.stringify(deleteNote));
+    res.json(deleteNote);
+    
+  })
 };
 
