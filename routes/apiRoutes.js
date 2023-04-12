@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs')
-var uniqid = require('uniqid');
+var uniqueID = require('uniqid');
 
 // API ROUTE
 // Setup the /api/notes get route
@@ -18,7 +18,7 @@ module.exports = (app) => {
           title: req.body.title,
           text: req.body.text,
           // creating unique id for each note
-          id: uniqid(),
+          id: uniqueID(),
         };
         // pushing created note to be written in the db.json file
         db.push(userInputNote);
