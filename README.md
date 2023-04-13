@@ -18,3 +18,6 @@ Clone the project, and run npm i, npm i express, and npm i uniqid@5.3.0 in the c
 * run npm i, npm i express, and npm i uniqid@5.3.0 in the command line
 * run node server.js in the command line
 * App listening at http://localhost:3001
+
+
+Screenshot: ![image](https://user-images.githubusercontent.com/122870981/231654748-93a6556a-efe1-434a-90c9-dfa9bf792b36.png)
