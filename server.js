@@ -1,6 +1,7 @@
 // Import Express.js dependency 
 const express = require('express');
-// 
+const uniqid = require('uniqid');
+
 
 // Initialize express
 const app = express();
@@ -13,12 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 //Require routes file
-require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
+require('./routes/htmlRoutes')(app);
 
 // Setup Listener
 app.listen(PORT, () => {
-    console.log(`App listening at localhost${PORT}`);
+    console.log(`App listening at http://localhost:${PORT}`);
   });
 
 
